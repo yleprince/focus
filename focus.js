@@ -37,11 +37,10 @@ function notify(text) {
 
 function playSound(sound) {
     let sound_url;
-    switch (sound) {
-        case "applause":
-            sound_url = "https://raw.githubusercontent.com/yleprince/focus/master/applauses.mp3"
-        case "start":
-            sound_url = "https://raw.githubusercontent.com/yleprince/focus/master/start.mp3"
+    if (sound === "applause") {
+        sound_url = "https://raw.githubusercontent.com/yleprince/focus/master/applauses.mp3"
+    } else if (sound == "start") {
+        sound_url = "https://raw.githubusercontent.com/yleprince/focus/master/start.mp3"
     }
     const audio = new Audio(sound_url);
     audio.play();
